@@ -6,6 +6,11 @@ async function cadastro() {
   let birthday = document.getElementById("birthday").value;
   let terms = document.getElementById("terms").checked;
 
+  if (!name || !email || !password || !cpf_cnpj || !birthday) {
+    alert("Todos os campos devem ser preenchidos.");
+    return;
+  }
+
   if (!terms) {
     alert("Você deve aceitar os termos de uso para continuar.");
     return;

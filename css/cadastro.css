@@ -22,6 +22,11 @@ header {
   padding: 3px;
 }
 
+#title:hover {
+  color: rgb(132, 14, 201);
+  transition: 0.3s all;
+}
+
 li {
   display: inline-block;
   margin: 20px;
@@ -147,4 +152,24 @@ input[type="checkbox"] {
 
 #submit-container input[type="button"]:hover {
   background-color: rgb(100, 10, 150);
+}
+
+@media screen and (max-width: 1036px) {
+  h2 {
+    font-size: 25px;
+  }
+}
+
+@media screen and (max-width: 425px) {
+  main {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    margin-top: 50px;
+  }
+
+  img {
+    width: 300px;
+    margin-top: -20px;
+  }
 }

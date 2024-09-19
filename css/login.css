@@ -1,0 +1,147 @@
+body {
+  background-color: rgb(214, 214, 214);
+  color: black;
+  font-family: Poppins, sans-serif;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 15px;
+  overflow: hidden;
+}
+
+header {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+}
+
+#title {
+  flex-direction: column;
+  line-height: 10px;
+  border: 3px solid;
+  padding: 3px;
+}
+
+#title:hover {
+  color: rgb(132, 14, 201);
+  transition: 0.3s all;
+}
+
+li {
+  display: inline-block;
+  margin: 20px;
+}
+
+a {
+  color: black;
+  text-decoration: none;
+}
+
+a:hover {
+  color: rgb(132, 14, 201);
+  transition: 0.3s all;
+}
+
+#cadastro-btn {
+  border: 2px solid rgb(132, 14, 201);
+  padding: 10px;
+  border-radius: 15px;
+}
+
+#cadastro-btn:hover {
+  background-color: rgb(132, 14, 201);
+  color: white;
+}
+
+h1 {
+  font-weight: 200;
+}
+
+main {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  margin-top: 50px;
+}
+
+h2 {
+  font-size: 30px;
+  line-height: 10px;
+  font-family: Poppins, sans-serif;
+}
+
+span {
+  color: rgb(132, 14, 201);
+}
+
+img {
+  width: 480px;
+  margin-top: -20px;
+}
+
+form {
+  display: flex;
+  flex-direction: column;
+}
+
+.form-group {
+  display: flex;
+  flex-direction: column;
+  width: 94%;
+}
+
+.form-group label {
+  display: block;
+  margin-bottom: 5px;
+  margin-left: 10px;
+}
+
+form [type="submit"] {
+  height: 50px;
+  background-color: rgb(132, 14, 201);
+  color: white;
+  font-weight: bold;
+}
+
+input {
+  width: 100%;
+  margin-bottom: 15px;
+  padding: 15px;
+  border-radius: 15px;
+  border: none;
+  font-size: 15px;
+}
+
+#submit-container input[type="button"] {
+  height: 50px;
+  background-color: rgb(132, 14, 201);
+  color: white;
+  font-weight: bold;
+  border: none;
+  border-radius: 15px;
+  cursor: pointer;
+}
+
+#submit-container input[type="button"]:hover {
+  background-color: rgb(100, 10, 150);
+}
+
+@media screen and (max-width: 1036px) {
+  h2 {
+    font-size: 25px;
+  }
+}
+
+@media screen and (max-width: 425px) {
+  main {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    margin-top: 50px;
+  }
+
+  img {
+    width: 300px;
+    margin-top: -20px;
+  }
+}

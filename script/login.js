@@ -13,6 +13,7 @@ async function login() {
 
     let locationInfo = location;
     console.log(locationInfo);
+    const origin = "http://127.0.0.1:5500";
 
     try {
       let url = "https://go-wash-api.onrender.com/api/login";
@@ -24,12 +25,16 @@ async function login() {
         body: JSON.stringify(data),
       });
 
-      const result = await response.json();
+      console.log(response.status);
 
-      if (result.token) {
-        localStorage.setItem("token", result.token);
+      const result = await response.json();
+      console.log(result);
+
+      if (result.access_token) {
+        localStorage.setItem("access_token", result.token);
         localStorage.setItem("user", result.user.id); // Armazena o id do usuário no localStorage
-        window.location.href = "../index.html";
+        console.log("Redirecionando para: " + origin + "/index.html");
+        window.location.href = origin + "/index.html";
       } else {
         alert(result.message || "Erro desconhecido");
       }

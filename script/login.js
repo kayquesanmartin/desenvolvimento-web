@@ -1,6 +1,10 @@
 async function login() {
-    let email = document.getElementById("email").value;
-    let password = document.getElementById("password").value;
+  let email = document.getElementById("email").value;
+  let password = document.getElementById("password").value;
+
+  if (!email || !password) {
+    alert("Todos os campos devem ser preenchidos");
+  } else {
     const data = {
       email: email,
       password: password,
@@ -19,15 +23,18 @@ async function login() {
         },
         body: JSON.stringify(data),
       });
+
       const result = await response.json();
-      console.log(result);
+
       if (result.token) {
         localStorage.setItem("token", result.token);
+        localStorage.setItem("user", result.user.id); // Armazena o id do usuário no localStorage
         window.location.href = "../index.html";
       } else {
-        alert(result);
+        alert(result.message || "Erro desconhecido");
       }
     } catch (error) {
       console.log(error);
     }
+  }
 }

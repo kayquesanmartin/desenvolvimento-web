@@ -1,6 +1,6 @@
 async function cadastro() {
   // Obtém os valores dos campos do formulário usando seus IDs
-  let name = document.getElementById("name").value; 
+  let name = document.getElementById("name").value;
   let email = document.getElementById("email").value;
   let password = document.getElementById("password").value;
   let cpf_cnpj = document.getElementById("cpf_cnpj").value;
@@ -8,13 +8,13 @@ async function cadastro() {
   let terms = document.getElementById("terms").checked; // Verifica se os termos foram aceitos
 
   // Verifica se todos os campos obrigatórios estão preenchidos
-  if (!name || !email || !password || !cpf_cnpj || !birthday) { 
+  if (!name || !email || !password || !cpf_cnpj || !birthday) {
     alert("Todos os campos devem ser preenchidos.");
     return; // Interrompe a execução se algum campo estiver vazio
   }
 
   // Verifica se os termos de uso foram aceitos
-  if (!terms) { 
+  if (!terms) {
     alert("Você deve aceitar os termos de uso para continuar.");
     return; // Interrompe a execução se os termos não forem aceitos
   }
@@ -36,13 +36,13 @@ async function cadastro() {
     let response = await fetch(url, {
       method: "POST", // Método HTTP para criar um novo recurso
       body: JSON.stringify(data), // Converte o objeto de dados em uma string JSON
-      headers: { 
+      headers: {
         "Content-Type": "application/json", // Indica que o corpo da requisição é JSON
       },
     });
 
     // Verifica se a resposta da API foi bem-sucedida
-    if (response.ok) { 
+    if (response.ok) {
       let result = await response.json(); // Converte a resposta em JSON
       alert("Cadastro realizado com sucesso!"); // Alerta de sucesso
       console.log(result.data); // Exibe os dados retornados no console

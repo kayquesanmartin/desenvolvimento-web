@@ -1,45 +1,46 @@
 <!DOCTYPE html>
 <html lang="pt-br">
-    <head>
-        <meta charset="UTF-8">
-        <meta http-equiv="X-UA-compatible" content="IE=edge">
-        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-        <title>Endereço</title>
-        <script src="script/enderco.js"></script>
-    </head>
-        <body>
-            <div id="title">
-                <h1>Car</h1>
-                <h1>One</h1>
-            </div>
-            <main>
-                <form id="form">
-                    <div class="form-group">
-                      <label for="titulo">Dê um nome para esse endereço<br /></label>
-                      <input type="text" title="titulo" id="titulo" />
-                      <br />
-                      <label for="cep">CEP:<br /></label>
-                      <input type="email" id="cep" name="cep" />
-                      <br />
-                      <label for="address">Endereço:<br /></label>
-                      <input type="text" id="address" name="address" />
-                      <br />
-                    </div>
-                    <div class="form-group">
-                      <label for="number">numero:<br /></label>
-                      <input type="text" id="number" name="number" />
-                      <br />
-                      <label for="complement">Complemento:<br /></label>
-                      <input type="text" id="complement" name="complement />
-                      <div id="terms-container">
-                      </div>
-                      <div id="submit-container">
-                        <input type="button" value="Pedir Agora" onclick="cadastro()" />
-                      </div>
-                    </div>
-                  </form>
-                </aside>
-              
-            </main>
-        </body>
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Endereço</title>
+  </head>
+  <body>
+    <div id="header">
+      <h1>Car</h1>
+      <h1>One</h1>
+    </div>
+    <main>
+      <form id="form">
+        <div class="form-group">
+          <label for="title">Dê um nome para esse endereço:<br /></label>
+          <input type="text" id="title" name="title" />
+          <br />
+          <label for="cep">CEP:<br /></label>
+          <input type="text" id="cep" name="cep" />
+          <br />
+          <label for="address">Endereço:<br /></label>
+          <input type="text" id="address" name="address" />
+          <br />
+        </div>
+        <div class="form-group">
+          <label for="number">Número:<br /></label>
+          <input type="text" id="number" name="number" />
+          <br />
+          <label for="complement">Complemento:<br /></label>
+          <input type="text" id="complement" name="complement" />
+          <br />
+          <div id="submit-container">
+            <input
+              type="button"
+              value="Cadastrar Endereço"
+              onclick="cadastraEndereco()"
+            />
+          </div>
+        </div>
+      </form>
+    </main>
+    <script src="../script/endereco.js"></script>
+  </body>
 </html>

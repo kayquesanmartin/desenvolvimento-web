@@ -1,88 +1,45 @@
 <!DOCTYPE html>
-<html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Cadastre-se | Car One</title>
-    <link rel="stylesheet" href="../css/endereco.css" />
-    <link rel="preconnect" href="https://fonts.googleapis.com" />
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link
-      href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
-      rel="stylesheet"
-    />
-    <script src="../script/cadastro.js"></script>
-  </head>
-  <body>
-    <header>
-      <div id="title">
-        <a href="../index.html">
-          <h1>Car</h1>
-          <h1>One</h1>
-        </a>
-      </div>
-
-      <div>
-        <ul>
-          <a href="#">
-            <li>Serviços</li>
-          </a>
-          <a href="#">
-            <li>Sobre</li>
-          </a>
-          <a href="#">
-            <li>Contato</li>
-          </a>
-          <a href="./login.html" id="login-btn">
-            <li>Já possuo uma conta</li>
-          </a>
-        </ul>
-      </div>
-    </header>
-
-    <main>
-      <aside>
-        <h2>Cadastre seu endereco <span> em minutos</span></h2>
-        <h2>E <span>descubra</span> uma nova</h2>
-        <h2>maneira de <span>navegar</span> pela cidade!</h2>
-
-        <form id="form">
-          <div class="form-group">
-            <label for="CEP">CEP:<br /></label>
-            <input type="text" id="CEP" name="CEP" />
-            <br />
-
-            <label for="endereco">Endereço:<br /></label>
-            <input type="text" id="endereco" name="endereco" />
-            <br />
-
-            <label for="name">Apelido:<br /></label>
-            <input type="text" name="name" id="name" />
-            <br />
-            <br />
-            
-          </div>
-          <div class="form-group">
-            <label for="numero">Número<br /></label>
-            <input type="number" id="numero" name="numero" />
-            <br />
-            <label for="complemento">Complemento:<br /></label>
-            <input type="text" id="complemento" name="complemento" />
-            <br />
-            <br />
-            <div id="submit-container">
-                <input type="button" value="Cadastre-se" onclick="cadastro()" />
-              </div>  
-          </div>
-
-           
-          </div>
-        </form>
-      </aside>
-
-      <article>
-        <img src="./img/life-in-a-city-animate (2).svg" alt="Vida na cidade" />
-      </article>
-    </main>
-  </body>
+<html lang="pt-br">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Endereço</title>
+        <script src="script/enderco.js"></script>
+    </head>
+        <body>
+            <div id="title">
+                <h1>Car</h1>
+                <h1>One</h1>
+            </div>
+            <main>
+                <form id="form">
+                    <div class="form-group">
+                      <label for="titulo">Dê um nome para esse endereço<br /></label>
+                      <input type="text" title="titulo" id="titulo" />
+                      <br />
+                      <label for="cep">CEP:<br /></label>
+                      <input type="email" id="cep" name="cep" />
+                      <br />
+                      <label for="address">Endereço:<br /></label>
+                      <input type="text" id="address" name="address" />
+                      <br />
+                    </div>
+                    <div class="form-group">
+                      <label for="number">numero:<br /></label>
+                      <input type="text" id="number" name="number" />
+                      <br />
+                      <label for="complement">Complemento:<br /></label>
+                      <input type="text" id="complement" name="complement />
+                      <div id="terms-container">
+                      </div>
+                      <div id="submit-container">
+                        <input type="button" value="Pedir Agora" onclick="cadastro()" />
+                      </div>
+                    </div>
+                  </form>
+                </aside>
+              
+            </main>
+        </body>
 </html>

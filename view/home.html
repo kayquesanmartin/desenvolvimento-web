@@ -1,8 +1,10 @@
 <!DOCTYPE html>
-<html lang="pt-br">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<html lang="pt-br"> <!-- Define o idioma da página como português do Brasil -->
+<head>
+    <meta charset="UTF-8" /> <!-- Define a codificação de caracteres como UTF-8 -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /> <!-- Responsividade para dispositivos móveis -->
+    
+    <!-- Link para o stylesheet do Font Awesome, que fornece ícones -->
     <link
       rel="stylesheet"
       href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"
@@ -10,108 +12,112 @@
       crossorigin="anonymous"
       referrerpolicy="no-referrer"
     />
+    
+    <!-- Link para o stylesheet local -->
     <link rel="stylesheet" href="../css/home.css" />
+    <!-- Script JavaScript local -->
     <script src="../script/home.js"></script>
-    <title>Home</title>
-  </head>
+    <title>Home</title> <!-- Título da página -->
+</head>
 
-  <body>
-    <header class="main1">
-      <div id="title">
-        <a href="../index.html">
-          <h1>Car</h1>
-          <h1>One</h1>
-        </a>
-      </div>
+<body>
+    <header class="main1"> <!-- Cabeçalho da página -->
+        <div id="title">
+            <a href="../index.html"> <!-- Link para a página inicial -->
+                <h1>Car</h1>
+                <h1>One</h1>
+            </a>
+        </div>
     </header>
 
-    <nav id="sidebar">
-      <div id="sidebar_content">
-        <div id="user">
-          <img
-            src="../view/img/user-svgrepo-com.svg"
-            id="user_avatar"
-            alt="Avatar"
-          />
+    <nav id="sidebar"> <!-- Barra lateral de navegação -->
+        <div id="sidebar_content">
+            <div id="user"> <!-- Informações do usuário -->
+                <img
+                    src="../view/img/user-svgrepo-com.svg" 
+                    id="user_avatar"
+                    alt="Avatar"
+                />  <!-- Imagem do avatar do usuário -->
+                <p id="user_infos"> <!-- Informações do usuário -->
+                    <span class="item-description"> Usuario </span>
+                    <span class="item-description"> Lorem Ipsum </span>
+                </p>
+            </div>
 
-          <p id="user_infos">
-            <span class="item-description"> Usuario </span>
-            <span class="item-description"> Lorem Ipsum </span>
-          </p>
+            <ul id="side_items"> <!-- Lista de itens do menu lateral -->
+                <li class="side-item active"> <!-- Item ativo -->
+                    <a href="#">
+                        <i class="fa-solid fa-chart-line"></i> <!-- Ícone do Font Awesome -->
+                        <span class="item-description"> Dashboard </span>
+                    </a>
+                </li>
+                
+                <li class="side-item">
+                    <a href="#">
+                        <i class="fa-solid fa-user"></i>
+                        <span class="item-description"> Usuários </span>
+                    </a>
+                </li>
+                <li class="side-item">
+                  <a href="endereco.html">
+                      <img src="../view/img/pngwing.com.png" alt="Veículos" style="width: 20px; height: 20px;"/> 
+                      <span class="item-description"> Endereços </span>
+                  </a>
+              </li>
+                <li class="side-item">
+                    <a href="#">
+                        <i class="fa-solid fa-bell"></i>
+                        <span class="item-description"> Notificações </span>
+                    </a>
+                </li>
+                <li class="side-item">
+                    <a href="#">
+                        <i class="fa-solid fa-box"></i>
+                        <span class="item-description"> Produtos </span>
+                    </a>
+                </li>
+                <li class="side-item">
+                  <a href="#">
+                      <img src="../view/img/carro.png" alt="Veículos" style="width: 20px; height: 20px;"/> 
+                      <span class="item-description"> Veículos </span>
+                  </a>
+              </li>
+                <li class="side-item">
+                    <a href="#">
+                        <i class="fa-solid fa-gear"></i>
+                        <span class="item-description"> Configurações </span>
+                    </a>
+                </li>
+            </ul>
+
+            <button id="open_btn"> <!-- Botão para abrir ou fechar a barra lateral -->
+                <i id="open_btn_icon" class="fa-solid fa-chevron-right"></i>
+            </button>
         </div>
 
-        <ul id="side_items">
-          <li class="side-item active">
-            <a href="#">
-              <i class="fa-solid fa-chart-line"></i>
-              <span class="item-description"> Dashboard </span>
-            </a>
-          </li>
-
-          <li class="side-item">
-            <a href="#">
-              <i class="fa-solid fa-user"></i>
-              <span class="item-description"> Usuários </span>
-            </a>
-          </li>
-
-          <li class="side-item">
-            <a href="#">
-              <i class="fa-solid fa-bell"></i>
-              <span class="item-description"> Notificações </span>
-            </a>
-          </li>
-
-          <li class="side-item">
-            <a href="#">
-              <i class="fa-solid fa-box"></i>
-              <span class="item-description"> Produtos </span>
-            </a>
-          </li>
-
-          <li class="side-item">
-            <a href="#">
-              <i class="fa-solid fa-image"></i>
-              <span class="item-description"> Imagens </span>
-            </a>
-          </li>
-
-          <li class="side-item">
-            <a href="#">
-              <i class="fa-solid fa-gear"></i>
-              <span class="item-description"> Configurações </span>
-            </a>
-          </li>
-        </ul>
-
-        <button id="open_btn">
-          <i id="open_btn_icon" class="fa-solid fa-chevron-right"></i>
-        </button>
-      </div>
-
-      <div id="logout">
-        <button id="logout_btn">
-          <i class="fa-solid fa-right-from-bracket"></i>
-          <span class="item-description"> Logout </span>
-        </button>
-      </div>
+        <div id="logout"> <!-- Seção de logout -->
+            <button id="logout_btn">
+                <i class="fa-solid fa-right-from-bracket"></i>
+                <span class="item-description"> Logout </span>
+            </button>
+        </div>
     </nav>
 
-    <main>
-      <div class="geral">
-        <div class="user-name-header">
-          <p></p>
-        </div>
+    <main> <!-- Conteúdo principal da página -->
+        <div class="geral">
+            <div class="user-name-header"> <!-- Cabeçalho com o nome do usuário -->
+                <p></p>
+            </div>
 
-        <div class="content">
-          <p>EM PROGRESSO...</p>
-          <div class="Destaques">
-            <div></div>
-            <div></div>
-          </div>
+            <div class="content"> <!-- Área de conteúdo -->
+                <p>EM PROGRESSO...</p> <!-- Mensagem de progresso -->
+                <div class="Destaques"> <!-- Seção de destaques -->
+                    <div></div>
+                    <div></div>
+                </div>
+            </div>
         </div>
-      </div>
     </main>
-    <script src="../script/home.js"></script>
-  </body>
+    <script src="../script/home.js"></script> <!-- Script JavaScript local -->
+</body>
 </html>

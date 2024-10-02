@@ -1,226 +1,193 @@
 @import url("https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap");
 
+/* Estilos globais */
 * {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
-  font-family: "Poppins", sans-serif;
+  margin: 0; /* Remove margens */
+  padding: 0; /* Remove preenchimentos */
+  box-sizing: border-box; /* Inclui bordas e preenchimentos no tamanho total do elemento */
+  font-family: "Poppins", sans-serif; /* Define a fonte como Poppins */
 }
 
 body {
-  display: flex;
-  min-height: 100vh;
-  background-color: #e3e9f7;
+  display: flex; /* Flexbox para layout */
+  min-height: 100vh; /* Mínima altura da tela */
+  background-color: #e3e9f7; /* Cor de fundo da página */
 }
 
 #sidebar {
-  display: flex;
-  flex-direction: column;
-  justify-content: space-between;
-  background-color: #ffffff;
-  height: 100vh;
-  border-radius: 0px 18px 18px 0px;
-  position: relative;
-  transition: all 0.5s;
-  min-width: 82px;
-  z-index: 2;
+  display: flex; /* Flexbox para o sidebar */
+  flex-direction: column; /* Organiza os itens em coluna */
+  justify-content: space-between; /* Espaçamento entre os elementos */
+  background-color: #ffffff; /* Cor de fundo do sidebar */
+  height: 100vh; /* Altura total da tela */
+  border-radius: 0px 18px 18px 0px; /* Bordas arredondadas */
+  position: relative; /* Posição relativa para posicionamento de filhos */
+  transition: all 0.5s; /* Transição suave para alterações */
+  min-width: 82px; /* Largura mínima do sidebar */
+  z-index: 2; /* Camada acima de outros elementos */
 }
 
 #sidebar_content {
-  padding: 12px;
+  padding: 12px; /* Preenchimento interno do conteúdo do sidebar */
 }
 
 #user {
-  display: flex;
-  align-items: center;
-  gap: 8px;
-  margin-bottom: 24px;
+  display: flex; /* Flexbox para o bloco do usuário */
+  align-items: center; /* Alinha itens ao centro verticalmente */
+  gap: 8px; /* Espaço entre os itens */
+  margin-bottom: 24px; /* Margem inferior */
 }
 
 #user_avatar {
-  width: 50px;
-  height: 50px;
-  object-fit: cover;
-  border-radius: 20px;
+  width: 50px; /* Largura do avatar */
+  height: 50px; /* Altura do avatar */
+  object-fit: cover; /* Cobre o espaço do elemento */
+  border-radius: 20px; /* Bordas arredondadas do avatar */
 }
 
 #user_infos {
-  display: flex;
-  flex-direction: column;
+  display: flex; /* Flexbox para informações do usuário */
+  flex-direction: column; /* Organiza em coluna */
 }
 
 #user_infos span:last-child {
-  color: #6b6b6b;
-  font-size: 12px;
+  color: #6b6b6b; /* Cor do texto do último span */
+  font-size: 12px; /* Tamanho da fonte */
 }
 
 #side_items {
-  display: flex;
-  flex-direction: column;
-  gap: 8px;
-  list-style: none;
+  display: flex; /* Flexbox para itens do sidebar */
+  flex-direction: column; /* Organiza em coluna */
+  gap: 8px; /* Espaço entre os itens */
+  list-style: none; /* Remove a lista padrão */
 }
 
 .side-item {
-  border-radius: 8px;
-  padding: 14px;
-  cursor: pointer;
+  border-radius: 8px; /* Bordas arredondadas */
+  padding: 14px; /* Preenchimento interno */
+  cursor: pointer; /* Cursor de ponteiro ao passar o mouse */
 }
 
 .side-item.active {
-  background-color: #4f46e5;
+  background-color: #4f46e5; /* Cor de fundo para o item ativo */
 }
 
 .side-item:hover:not(.active),
 #logout_btn:hover {
-  background-color: #e3e9f7;
+  background-color: #e3e9f7; /* Cor de fundo ao passar o mouse */
 }
 
 .side-item a {
-  text-decoration: none;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  color: #0a0a0a;
+  text-decoration: none; /* Remove sublinhado dos links */
+  display: flex; /* Flexbox para links */
+  align-items: center; /* Alinha itens ao centro verticalmente */
+  justify-content: center; /* Centraliza horizontalmente */
+  color: #0a0a0a; /* Cor do texto dos links */
 }
 
 .side-item.active a {
-  color: #e3e9f7;
+  color: #e3e9f7; /* Cor do texto do link ativo */
 }
 
 .side-item a i {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  width: 20px;
-  height: 20px;
+  display: flex; /* Flexbox para ícones */
+  align-items: center; /* Alinha itens ao centro verticalmente */
+  justify-content: center; /* Centraliza horizontalmente */
+  width: 20px; /* Largura do ícone */
+  height: 20px; /* Altura do ícone */
 }
 
 #logout {
-  border-top: 1px solid #e3e9f7;
-  padding: 12px;
+  border-top: 1px solid #e3e9f7; /* Borda superior do logout */
+  padding: 12px; /* Preenchimento interno */
 }
-
+    
 #logout_btn {
-  border: none;
-  padding: 12px;
-  font-size: 14px;
-  display: flex;
-  gap: 20px;
-  align-items: center;
-  border-radius: 8px;
-  text-align: start;
-  cursor: pointer;
-  background-color: transparent;
+  border: none; /* Remove bordas */
+  padding: 12px; /* Preenchimento interno */
+  font-size: 14px; /* Tamanho da fonte */
+  display: flex; /* Flexbox para o botão de logout */
+  gap: 20px; /* Espaço entre os itens */
+  align-items: center; /* Alinha itens ao centro verticalmente */
+  border-radius: 8px; /* Bordas arredondadas */
+  text-align: start; /* Alinhamento do texto à esquerda */
+  cursor: pointer; /* Cursor de ponteiro ao passar o mouse */
+  background-color: transparent; /* Fundo transparente */
 }
 
 #open_btn {
-  position: absolute;
-  top: 30px;
-  right: -10px;
-  background-color: #4f46e5;
-  color: #e3e9f7;
-  border-radius: 100%;
-  width: 20px;
-  height: 20px;
-  border: none;
-  cursor: pointer;
+  position: absolute; /* Posição absoluta para o botão de abrir o sidebar */
+  top: 30px; /* Distância do topo */
+  right: -10px; /* Distância da direita */
+  background-color: #4f46e5; /* Cor de fundo do botão */
+  color: #e3e9f7; /* Cor do texto do botão */
+  border-radius: 100%; /* Bordas arredondadas */
+  width: 20px; /* Largura do botão */
+  height: 20px; /* Altura do botão */
+  border: none; /* Remove bordas */
+  cursor: pointer; /* Cursor de ponteiro ao passar o mouse */
 }
 
 #open_btn_icon {
-  transition: transform 0.3s ease;
+  transition: transform 0.3s ease; /* Transição suave para a rotação do ícone */
 }
 
 .open-sidebar #open_btn_icon {
-  transform: rotate(180deg);
+  transform: rotate(180deg); /* Rotação do ícone ao abrir o sidebar */
 }
 
 .item-description {
-  width: 0px;
-  overflow: hidden;
-  white-space: nowrap;
-  text-overflow: ellipsis;
-  font-size: 14px;
-  transition: width 0.6s;
-  height: 0px;
+  width: 0px; /* Inicialmente, a largura é 0 para esconder texto */
+  overflow: hidden; /* Esconde conteúdo que transborda */
+  white-space: nowrap; /* Impede quebra de linha */
+  text-overflow: ellipsis; /* Exibe reticências se o texto transbordar */
+  font-size: 14px; /* Tamanho da fonte */
+  transition: width 0.6s; /* Transição suave para largura */
+  height: 0px; /* Altura inicial é 0 */
 }
 
 #sidebar.open-sidebar {
-  min-width: 15%;
+  min-width: 15%; /* Largura mínima quando o sidebar está aberto */
 }
 
 #sidebar.open-sidebar .item-description {
-  width: 150px;
-  height: auto;
+  width: 150px; /* Largura do texto quando aberto */
+  height: auto; /* Altura automática */
 }
 
 #sidebar.open-sidebar .side-item a {
-  justify-content: flex-start;
-  gap: 14px;
-}
-
-#title {
-  flex-direction: column;
-  line-height: 10px;
-  border: 3px solid;
-  padding: 3px;
-  width: 100px;
+  justify-content: flex-start; /* Alinha o conteúdo do link à esquerda */
+  gap: 14px; /* Espaço entre ícone e texto */
 }
 
 .imagem-entrar img {
-  width: 25px;
-  height: 25px;
-  vertical-align: middle;
-  margin-right: 5px;
+  width: 25px; /* Largura das imagens de entrar */
+  height: 25px; /* Altura das imagens de entrar */
+  vertical-align: middle; /* Alinha verticalmente ao meio */
+  margin-right: 5px; /* Margem à direita */
 }
 
 .imagem-entrar li img:hover {
-  stroke: rgb(132, 14, 201);
+  stroke: rgb(132, 14, 201); /* Efeito ao passar o mouse nas imagens */
 }
 
-/* header {
-    display: flex;
-    flex-direction: row;
-    justify-content: space-between;
-    align-items: center;
-  } */
-
-body {
-  background-color: rgb(214, 214, 214);
-}
-
-li {
-  display: inline-block;
-  margin: 20px;
-}
-
-a {
-  color: black;
-  text-decoration: none;
-}
-
-a:hover {
-  color: rgb(132, 14, 201);
-  transition: 0.3s all;
-}
-
+/* Estilos do header */
 header {
-  display: flex;
-  flex-direction: row-reverse;
-  justify-content: space-between;
-  align-items: center;
-  position: absolute;
-  right: 100px;
+  display: flex; /* Flexbox para o cabeçalho */
+  flex-direction: row-reverse; /* Ordem inversa dos elementos */
+  justify-content: space-between; /* Espaço entre os elementos */
+  align-items: center; /* Alinha itens ao centro verticalmente */
+  position: absolute; /* Posição absoluta do cabeçalho */
+  right: 100px; /* Distância da direita */
 }
 
 h1 {
-  font-weight: 200;
-  font-family: "Poppins", sans-serif;
+  font-weight: 200; /* Peso da fonte */
+  font-family: "Poppins", sans-serif; /* Fonte do título */
 }
 
 #title {
   flex-direction: column;
-  line-height: 10px;
   border: 3px solid;
   padding: 3px;
 }
@@ -230,47 +197,52 @@ h1 {
   transition: 0.3s all;
 }
 
-/* -----------------------campos--------------------------------- */
+a {
+  color: black;
+  text-decoration: none;
+}
 
+/* Estilos do conteúdo principal */
 main {
-  align-items: center;
-  width: 100%;
-  display: flex;
-  flex-direction: column;
-  height: 100vh;
+  align-items: center; /* Alinha itens ao centro verticalmente */
+  width: 100%; /* Largura total */
+  display: flex; /* Flexbox para o conteúdo principal */
+  flex-direction: column; /* Organiza em coluna */
+  height: 100vh; /* Altura total da tela */
 }
 
 .user-name-header {
-  width: 100%;
-  display: flex;
-  justify-content: space-between;
+  width: 100%; /* Largura total */
+  display: flex; /* Flexbox para cabeçalho do usuário */
+  justify-content: space-between; /* Espaçamento entre os elementos */
 }
 
 .geral {
-  width: 100%;
-  height: 100%;
+  width: 100%; /* Largura total */
+  height: 100%; /* Altura total */
 }
 
 #esquerda {
-  align-items: center;
+  align-items: center; /* Alinha itens ao centro verticalmente */
 }
 
 .content {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  flex-direction: column;
-  gap: 20px;
-  width: 100%;
-  height: 100%;
+  display: flex; /* Flexbox para o conteúdo */
+  justify-content: center; /* Centraliza horizontalmente */
+  align-items: center; /* Alinha itens ao centro verticalmente */
+  flex-direction: column; /* Organiza em coluna */
+  gap: 20px; /* Espaço entre os itens */
+  width: 100%; /* Largura total */
+  height: 100%; /* Altura total */
 }
 
 .Destaques {
-  display: flex;
-  width: 100%;
-  justify-content: space-between;
+  display: flex; /* Flexbox para destaques */
+  width: 100%; /* Largura total */
+  justify-content: space-between; /* Espaçamento entre os destaques */
 }
-/* aplicar o estilo a todas as divs dentro dos detaques */
+
+/* Aplica estilo a todas as divs dentro dos destaques */
 .Destaques > div {
-  width: 100%;
+  width: 100%; /* Largura total para cada div de destaque */
 }

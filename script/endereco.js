@@ -1,11 +1,16 @@
-async function endereco() {
-  let title = document.getElementById("title").value;
-  let cep = document.getElementById("cep").value;
-  let address = document.getElementById("address").value;
-  let number = document.getElementById("number").value;
-  let complement = document.getElementById("complement").value;
+async function cadastraEndereco() {
+  const title = document.getElementById("title").value;
+  const cep = document.getElementById("cep").value;
+  const address = document.getElementById("address").value;
+  const number = document.getElementById("number").value;
+  const complement = document.getElementById("complement").value;
 
-  const dados = {
+  if (!title || !cep || !address || !number) {
+    alert("Por favor, preencha todos os campos obrigatórios.");
+    return;
+  }
+
+  const data = {
     title: title,
     cep: cep,
     address: address,
@@ -13,20 +18,36 @@ async function endereco() {
     complement: complement,
   };
 
-  console.log(dados);
+  const storedData = JSON.parse(localStorage.getItem("user"));
+  const token = storedData ? storedData.access_token : null;
+
+  if (!token) {
+    alert("Token de acesso não encontrado. Faça login novamente.");
+    return;
+  }
 
   try {
-    let url = "https://go-wash-api.onrender.com/api/user";
-    const response = await fetch(url, {
-      method: "POST",
-      headers: {
-        "Content-Type": "application/json",
-        Authorization:
-          "Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJodtZWZjOWM5NTgyNjg3Lmhlcm9rdWFwcC5jb20vYXBpL2xvZ2luIiwiaWF0IjoxNzEyMDc4Mjg0LCJuYmYiOjE3MTIwNzgyODQsImp0aSI6ImRPajVkTng4WEgxdVJ5TVkiLCJzdWIiOiIxIiwicHJ2IjoiMjNiZDVjODk0OWY2MDBhZGIzOWU3MDFjNDAwODcyZGI3YTU5NzZmNyJ9.oBAOYBcADNUiwFKgM",
-      },
-      body: JSON.stringify(dados),
-    });
+    const response = await fetch(
+      "https://go-wash-api.onrender.com/api/auth/address",
+      {
+        method: "POST",
+        headers: {
+          "Content-Type": "application/json",
+          Authorization: `Bearer ${token}`,
+        },
+        body: JSON.stringify(data),
+      }
+    );
+
+    if (!response.ok) {
+      throw new Error("Network response was not ok: " + response.statusText);
+    }
+
+    const result = await response.json();
+    console.log("Success:", result);
+    alert("Endereço cadastrado com sucesso!");
   } catch (error) {
-    console.log(error);
+    console.error("Error:", error);
+    alert("Ocorreu um erro ao cadastrar o endereço.");
   }
 }

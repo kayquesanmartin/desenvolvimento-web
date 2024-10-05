@@ -1,46 +1,131 @@
 <!DOCTYPE html>
 <html lang="pt-br">
-  <head>
-    <meta charset="UTF-8" />
-    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Endereço</title>
-  </head>
-  <body>
-    <div id="header">
-      <h1>Car</h1>
-      <h1>One</h1>
+
+<head>
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"
+    integrity="sha512-DTOQO9RWCH3ppGqcWaEA1BIZOC6xxalwEsw9c2QQeAIftl+Vegovlnee1c9QX4TctnWMn13TZye+giMm8e2LwA=="
+    crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+  <link rel="stylesheet" href="../css/endereco.css" />
+  <script src="../script/endereco.js"></script>
+  <title>Endereço</title>
+</head>
+
+<body>
+  <nav id="sidebar"> <!-- Barra lateral de navegação -->
+    <div id="sidebar_content">
+      <div id="user"> <!-- Informações do usuário -->
+        <img src="../view/img/user-svgrepo-com.svg" id="user_avatar" alt="Avatar" />
+        <!-- Imagem do avatar do usuário -->
+        <p id="user_infos"> <!-- Informações do usuário -->
+          <span class="item-description"> 
+            <b id="user-name-nav"> <!-- Cabeçalho com o nome do usuário -->
+            </b>
+          </span>
+          <span class="item-description"> -- </span>
+        </p>
+      </div>
+
+      <ul id="side_items"> <!-- Lista de itens do menu lateral -->
+        <li class="side-item"> <!-- Item ativo -->
+          <a href="home.html">
+            <i class="fa-solid fa-chart-line"></i> <!-- Ícone do Font Awesome -->
+            <span class="item-description"> Dashboard </span>
+          </a>
+        </li>
+
+        <li class="side-item">
+          <a href="#">
+            <i class="fa-solid fa-user"></i>
+            <span class="item-description"> Usuários </span>
+          </a>
+        </li>
+        <li class="side-item active">
+          <a href="endereco.html">
+            <i class="fa-solid fa-map-location-dot"></i>
+            <!-- <img src="../view/img/pngwing.com.png" alt="Veículos" style="width: 20px; height: 20px;"/>  -->
+            <span class="item-description"> Endereços </span>
+          </a>
+        </li>
+        <li class="side-item">
+          <a href="#">
+            <i class="fa-solid fa-bell"></i>
+            <span class="item-description"> Notificações </span>
+          </a>
+        </li>
+        <li class="side-item">
+          <a href="#">
+            <i class="fa-solid fa-box"></i>
+            <span class="item-description"> Produtos </span>
+          </a>
+        </li>
+        <li class="side-item">
+          <a href="#">
+            <i class="fa-solid fa-car"></i>
+            <!-- <img src="../view/img/carro.png" alt="Veículos" style="width: 20px; height: 20px;"/>  -->
+            <span class="item-description"> Veículos </span>
+          </a>
+        </li>
+        <li class="side-item">
+          <a href="#">
+            <i class="fa-solid fa-gear"></i>
+            <span class="item-description"> Configurações </span>
+          </a>
+        </li>
+      </ul>
+
+      <button id="open_btn"> <!-- Botão para abrir ou fechar a barra lateral -->
+        <i id="open_btn_icon" class="fa-solid fa-chevron-right"></i>
+      </button>
     </div>
-    <main>
-      <form id="form">
-        <div class="form-group">
-          <label for="title">Dê um nome para esse endereço:<br /></label>
-          <input type="text" id="title" name="title" />
-          <br />
-          <label for="cep">CEP:<br /></label>
-          <input type="text" id="cep" name="cep" />
-          <br />
-          <label for="address">Endereço:<br /></label>
-          <input type="text" id="address" name="address" />
-          <br />
+
+    <div id="logout"> <!-- Seção de logout -->
+      <button id="logout_btn">
+        <i class="fa-solid fa-right-from-bracket"></i>
+        <span class="item-description"> Logout </span>
+      </button>
+    </div>
+  </nav>
+  
+  <main>
+    <div class="img-fundo"></div>
+    </div>
+    <form id="form">
+      <div class="form-group">
+        <label for="cep">CEP:<br /></label>
+        <input type="text" id="cep" name="cep" />
+        <br />
+        <label for="address">Endereço:<br /></label>
+        <input type="text" id="address" name="address" />
+        <br />
+        <label for="number">Número:<br /></label>
+        <input type="text" id="number" name="number" />
+        <br />
+        <label for="complement">Complemento:<br /></label>
+        <input type="text" id="complement" name="complement" />
+        <br />
+        <label for="title">Insira um nome:<br /></label>
+        <input type="text" id="title-adress" name="title" />
+        <br />
+        <div id="submit-container">
+          <input type="button" value="Cadastrar Endereço" onclick="cadastraEndereco()" />
         </div>
-        <div class="form-group">
-          <label for="number">Número:<br /></label>
-          <input type="text" id="number" name="number" />
-          <br />
-          <label for="complement">Complemento:<br /></label>
-          <input type="text" id="complement" name="complement" />
-          <br />
-          <div id="submit-container">
-            <input
-              type="button"
-              value="Cadastrar Endereço"
-              onclick="cadastraEndereco()"
-            />
-          </div>
-        </div>
-      </form>
-    </main>
-    <script src="../script/endereco.js"></script>
-  </body>
+      </div>
+    </form>    
+  </main>
+  
+  <header>
+    <div id="title">
+      <a href="../view/home.html">
+        <img src="../view/img/Logo1.png" alt="CarOne" style="width: 89px; height: 72px;" />
+      </a>
+    </div>
+  </header>
+  <script src="../script/endereco.js"></script>
+</body>
+
 </html>

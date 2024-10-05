@@ -1,3 +1,7 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
 body {
   background-color: rgb(214, 214, 214);
   color: black;
@@ -14,12 +18,12 @@ header {
   align-items: center;
 }
 
-#title {
+/* #title {
   flex-direction: column;
   line-height: 10px;
   border: 3px solid;
   padding: 3px;
-}
+} */
 
 #title:hover {
   color: rgb(132, 14, 201);
@@ -95,7 +99,7 @@ p {
 img {
   width: 480px;
   color: rgb(132, 14, 201);
-  margin-top: -5px;
+  margin-top: -20px;
 }
 
 .imagem2 {

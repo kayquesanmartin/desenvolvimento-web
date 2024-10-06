@@ -1,45 +1,11 @@
-  input {
-    margin-top: 5px;
-    height: 10px;
-    padding: 15px;
-    border-radius: 15px;
-    border: solid 1px;
-    font-size: 15px;    
-  }
-  
-  
-  #submit-container {
-    display: flex;
-    width: 200%;
-    margin-top: 20px;
-  }
-  
-  #submit-container input[type="button"] {
-    height: 50px;
-    width: 50%;
-    background-color: rgb(132, 14, 201);
-    color: white;
-    font-weight: bold;
-    border: none;
-    border-radius: 15px;
-    cursor: pointer;
-  }
-  
-  #submit-container input[type="button"]:hover {
-    background-color: rgb(100, 10, 150);
-
-  }
-  
-
-
-  @import url("https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap");
-
+@import url("https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap");
+ 
   /* Estilos globais */
   * {
     margin: 0; /* Remove margens */
     padding: 0; /* Remove preenchimentos */
     box-sizing: border-box; /* Inclui bordas e preenchimentos no tamanho total do elemento */
-
+    font-family: "Poppins", sans-serif; /* Define a fonte como Poppins */
   }
   
   body {
@@ -196,17 +162,6 @@
     gap: 14px; /* Espaço entre ícone e texto */
   }
   
-  .imagem-entrar img {
-    width: 25px; /* Largura das imagens de entrar */
-    height: 25px; /* Altura das imagens de entrar */
-    vertical-align: middle; /* Alinha verticalmente ao meio */
-    margin-right: 5px; /* Margem à direita */
-  }
-  
-  .imagem-entrar li img:hover {
-    stroke: rgb(132, 14, 201); /* Efeito ao passar o mouse nas imagens */
-  }
-  
   /* Estilos do header */
   header {
     display: flex; /* Flexbox para o cabeçalho */
@@ -228,11 +183,6 @@
     /* border: 3px solid;
     padding: 3px; */
   }
-  
-  /* #title:hover {
-    color: rgb(132, 14, 201);
-    transition: 0.3s all;
-  } */
   
   a {
     color: black;
@@ -262,24 +212,8 @@
     background-position: 90px -300px; /* A imagem será centralizada */
     background-repeat: no-repeat;
     opacity: 0.85 ;
-    /* filter: blur(10%) */
     z-index: -1; /* Coloca a imagem de fundo atrás do conteúdo */
 
-  }
-  
-  .user-name-header {
-    width: 100%; /* Largura total */
-    display: flex; /* Flexbox para cabeçalho do usuário */
-    justify-content: space-between; /* Espaçamento entre os elementos */
-  }
-  
-  .geral {
-    width: 100%; /* Largura total */
-    height: 100%; /* Altura total */
-  }
-  
-  #esquerda {
-    align-items: center; /* Alinha itens ao centro verticalmente */
   }
   
   .content {
@@ -291,17 +225,6 @@
     width: 100%; /* Largura total */
     height: 100%; /* Altura total */
   }
-  
-  .destaques {
-    display: flex; /* Flexbox para destaques */
-    width: 100%; /* Largura total */
-    justify-content: space-between; /* Espaçamento entre os destaques */
-  }
-  
-  /* Aplica estilo a todas as divs dentro dos destaques */
-  .destaques > div {
-    width: 100%; /* Largura total para cada div de destaque */
-  }
 
   .form-group {
     background-color: white;
@@ -310,3 +233,39 @@
     box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
     margin-top: 100px;
   }
+
+  input {
+    margin-top: 5px;
+    height: 10px;
+    padding: 15px;
+    border-radius: 15px;
+    border: solid 1px;
+    font-size: 15px;    
+  }
+  
+  
+  #submit-container {
+    display: flex;
+    width: 200%;
+    margin-top: 20px;
+  }
+  
+  #submit-container input[type="button"] {
+    height: 50px;
+    width: 50%;
+    background-color: rgb(132, 14, 201);
+    color: white;
+    font-weight: bold;
+    border: none;
+    border-radius: 15px;
+    cursor: pointer;
+  }
+  
+  #submit-container input[type="button"]:hover {
+    background-color: rgb(100, 10, 150);
+
+  }
+
+  b#user-name-nav {
+    font-size: 25px;
+}

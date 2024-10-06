@@ -31,6 +31,10 @@ body {
   padding: 12px; /* Preenchimento interno do conteúdo do sidebar */
 }
 
+b#user-name-nav {
+  font-size: 25px;
+}
+
 #user {
   display: flex; /* Flexbox para o bloco do usuário */
   align-items: center; /* Alinha itens ao centro verticalmente */

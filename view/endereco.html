@@ -11,7 +11,6 @@
     crossorigin="anonymous" referrerpolicy="no-referrer" />
 
   <link rel="stylesheet" href="../css/endereco.css" />
-  <script src="../script/endereco.js"></script>
   <title>Endereço</title>
 </head>
 
@@ -26,7 +25,10 @@
             <b id="user-name-nav"> <!-- Cabeçalho com o nome do usuário -->
             </b>
           </span>
-          <span class="item-description"> -- </span>
+          <span class="item-description">
+            <b id="user-email-nav">
+            </b>
+          </span>
         </p>
       </div>
 
@@ -109,7 +111,7 @@
         <input type="text" id="complement" name="complement" />
         <br />
         <label for="title">Insira um nome:<br /></label>
-        <input type="text" id="title-adress" name="title" />
+        <input type="text" id="title" name="title" />
         <br />
         <div id="submit-container">
           <input type="button" value="Cadastrar Endereço" onclick="cadastraEndereco()" />

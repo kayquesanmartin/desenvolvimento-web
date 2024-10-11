@@ -19,7 +19,7 @@ document.addEventListener("DOMContentLoaded", function() {
     document.getElementById("user-name-nav").textContent = user.user.name;
   } else {
     // Caso não haja dados no localStorage ou nome, pode exibir uma mensagem padrão
-    document.getElementById("user-name-nav").textContent = "Bem-vindo, visitante!";
+    document.getElementById("user-name-nav").textContent = "Visitante!";
   }
 
 });
@@ -32,6 +32,7 @@ document.getElementById("logout_btn").addEventListener("click", function() {
   sessionStorage.removeItem("userSession");  // Se você estiver usando sessionStorage para sessão temporária
   
   // Redirecionar o usuário para a página de login ou home
+
   window.location.href = "../view/login.html";  // Altere para a página de login ou home desejada
 });
 
@@ -48,8 +49,7 @@ document.addEventListener("DOMContentLoaded", function() {
   }
 
 });
-
-
+ 
 
 
 

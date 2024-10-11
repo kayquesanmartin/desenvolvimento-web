@@ -147,11 +147,11 @@ body {
 }
 
 #sidebar.open-sidebar {
-  min-width: 20%; /* Largura mínima quando o sidebar está aberto */
+  min-width: auto; /* Largura mínima quando o sidebar está aberto */
 }
 
 #sidebar.open-sidebar .item-description {
-  width: 100%; /* Largura do texto quando aberto */
+  width: 200px; /* Largura do texto quando aberto */
   height: auto; /* Altura automática */
 }
 
@@ -325,7 +325,6 @@ main {
   font-weight: bold;
   font-size: 16px;
 }
-
 b#user-name-nav {
   font-size: 25px;
 }

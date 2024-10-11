@@ -28,10 +28,24 @@ document.addEventListener("DOMContentLoaded", function() {
 
 });
 
+document.addEventListener("DOMContentLoaded", function() {
+  // Recupera o objeto do usuário armazenado no localStorage
+  const user = JSON.parse(localStorage.getItem("user")); // Assumindo que os dados do usuário estão no localStorage como um objeto JSON
+
+  if (user && user.user.email) {
+    // Se o objeto de usuário existir e tiver o campo 'name', exibimos no header
+    document.getElementById("user-email-nav").textContent = user.user.email;
+  } else {
+    // Caso não haja dados no localStorage ou nome, pode exibir uma mensagem padrão
+    document.getElementById("user-email-nav").textContent = "Bem-vindo, visitante!";
+  }
+
+});
+
 
 async function cadastraEndereco() {
   const title = document.getElementById("title").value;
-  const cep = document.getElementById("cep").value;
+  const cep = document.xgetElementById("cep").value;
   const address = document.getElementById("address").value;
   const number = document.getElementById("number").value;
   const complement = document.getElementById("complement").value;

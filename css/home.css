@@ -151,11 +151,11 @@ b#user-name-nav {
 }
 
 #sidebar.open-sidebar {
-  min-width: 15%; /* Largura mínima quando o sidebar está aberto */
+  min-width: auto; /* Largura mínima quando o sidebar está aberto */
 }
 
 #sidebar.open-sidebar .item-description {
-  width: 150px; /* Largura do texto quando aberto */
+  width: 200px; /* Largura do texto quando aberto */
   height: auto; /* Altura automática */
 }
 
@@ -315,7 +315,7 @@ main {
 .Destaques div {
   background-color: #fff;
   border-radius: 10px;
-  padding: 160px;
+  padding: 40px;
   box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
 }
 
@@ -328,4 +328,11 @@ main {
   color: #333;
   font-weight: bold;
   font-size: 16px;
+}
+b#user-name-nav {
+  font-size: 25px;
+}
+
+b#user-email-nav {
+  font-size: 15px;
 }

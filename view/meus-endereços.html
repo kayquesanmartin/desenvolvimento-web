@@ -1,8 +1,8 @@
 <!DOCTYPE html>
-<html lang="pt-br">
+<html lang="pt-br"> <!-- Define o idioma da página como português do Brasil -->
 
 <head>
-  <meta charset="UTF-8" />
+  <meta charset="UTF-8" /> <!-- Define a codificação de caracteres como UTF-8 -->
   <meta http-equiv="X-UA-Compatible" content="IE=edge" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
@@ -10,8 +10,9 @@
     integrity="sha512-DTOQO9RWCH3ppGqcWaEA1BIZOC6xxalwEsw9c2QQeAIftl+Vegovlnee1c9QX4TctnWMn13TZye+giMm8e2LwA=="
     crossorigin="anonymous" referrerpolicy="no-referrer" />
 
-  <link rel="stylesheet" href="../css/endereco.css" />
-  <title>Endereço</title>
+  <link rel="stylesheet" href="../css/meus-endereços.css" /> <!-- Link para o stylesheet local -->
+  <script src="../script/meus-endereços.js"></script> <!-- Script JavaScript local -->
+  <title>Meus Endereços</title> <!-- Título da página -->
 </head>
 
 <body>
@@ -53,7 +54,7 @@
             <span class="item-description"> Cadastrar Endereços </span>
           </a>
         </li>
-        <li class="side-item">
+        <li class="side-item active">
             <a href="meus-endereços.html">
               <i class="fa-solid fa-map-location-dot"></i>
               <!-- <img src="../view/img/pngwing.com.png" alt="Veículos" style="width: 20px; height: 20px;"/>  -->
@@ -87,7 +88,7 @@
         </li>
       </ul>
 
-      <button id="open_btn"> <!-- Botão para abrir ou fechar a barra lateral -->
+      <button id="open_btn" onclick="toggleSidebar()"> <!-- Botão para abrir ou fechar a barra lateral -->
         <i id="open_btn_icon" class="fa-solid fa-chevron-right"></i>
       </button>
     </div>
@@ -99,42 +100,39 @@
       </button>
     </div>
   </nav>
-  
-  <main>
-    <div class="img-fundo"></div>
-    </div>
-    <form id="form">
-      <div class="form-group">
-        <label for="cep">CEP:<br /></label>
-        <input type="text" id="cep" name="cep" />
-        <br />
-        <label for="address">Endereço:<br /></label>
-        <input type="text" id="address" name="address" />
-        <br />
-        <label for="number">Número:<br /></label>
-        <input type="text" id="number" name="number" />
-        <br />
-        <label for="complement">Complemento:<br /></label>
-        <input type="text" id="complement" name="complement" />
-        <br />
-        <label for="title">Insira um nome:<br /></label>
-        <input type="text" id="title" name="title" />
-        <br />
-        <div id="submit-container">
-          <input type="button" value="Cadastrar Endereço" onclick="cadastraEndereco()" />
+
+  <main> <!-- Conteúdo principal da página -->
+    <div class="geral">
+      <b id="user-name-header"> <!-- Cabeçalho com o nome do usuário -->
+      </b>
+      <div class="content"> <!-- Área de conteúdo -->
+        <p id="user_name"></p> 
+        <div class="Destaques"> <!-- Seção de destaques -->
+          <div>
+            <div>
+                <b id="address-list">
+                </b>
+            </div>
+          </div>
+          <div>
+            <p>segundo quadro mostrando detalhes...</p>
+          </div>
         </div>
       </div>
-    </form>    
+    </div>
   </main>
-  
-  <header>
+  <header class="main1"> <!-- Cabeçalho da página -->
     <div id="title">
-      <a href="../view/home.html">
+      <a href="../view/home.html"> <!-- Link para a página inicial -->
         <img src="../view/img/Logo1.png" alt="CarOne" style="width: 89px; height: 72px;" />
       </a>
     </div>
   </header>
-  <script src="../script/endereco.js"></script>
+  <script src="../script/meus-endereços.js"></script> <!-- Script JavaScript local -->
 </body>
 
 </html>
+
+
+
+

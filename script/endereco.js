@@ -45,7 +45,7 @@ document.addEventListener("DOMContentLoaded", function() {
 
 async function cadastraEndereco() {
   const title = document.getElementById("title").value;
-  const cep = document.xgetElementById("cep").value;
+  const cep = document.getElementById("cep").value;
   const address = document.getElementById("address").value;
   const number = document.getElementById("number").value;
   const complement = document.getElementById("complement").value;

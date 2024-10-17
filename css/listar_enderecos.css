@@ -361,4 +361,36 @@ input {
   cursor: pointer;
   width: 330px;
   height: 40px;
+  margin-top: 10fpx;
+  display: flex;
+  flex-direction: column;
+}
+
+
+.delete-btn{
+  background-color: rgb(132, 14, 201);
+  color: white;
+  border-radius: 10px;
+  cursor: pointer;
+  width: 100px;
+  height: 30px;
+  
+}
+
+.edit-btn{
+  background-color: rgb(132, 14, 201);
+  color: white;
+  border-radius: 10px;
+  cursor: pointer;
+  width: 100px;
+  height: 30px; 
+}
+
+#save-btn{
+  background-color: rgb(132, 14, 201);
+  color: white;
+  border-radius: 10px;
+  cursor: pointer;
+  width: 330px;
+  height: 40px;
 }

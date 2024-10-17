@@ -171,9 +171,7 @@ b#user-name-nav {
   margin-right: 5px; /* Margem à direita */
 }
 
-.imagem-entrar li img:hover {
-  stroke: rgb(132, 14, 201); /* Efeito ao passar o mouse nas imagens */
-}
+
 
 /* Estilos do header */
 header {
@@ -189,14 +187,6 @@ h1 {
   font-family: "Poppins", sans-serif; /* Fonte do título */
 }
 
-/* #title {
-  flex-direction: column;
-  line-height: 46px;
-  width: 76px;
-  border: 3px solid;
-  padding: 3px;
-} */
-
 #title:hover {
   color: rgb(132, 14, 201);
   transition: 0.3s all;
@@ -207,47 +197,6 @@ a {
   text-decoration: none;
 }
 
-/* Estilos do conteúdo principal */
-ain {
-  align-items: center; /* Alinha itens ao centro verticalmente */
-  width: 100%; /* Largura total */
-  display: flex; /* Flexbox para o conteúdo principal */
-  flex-direction: column; /* Organiza em coluna */
-  height: 100vh; /* Altura total da tela */
-}
-
-ain {
-  width: 100%;
-  display: grid;
-  grid-template-columns: repeat(4, 1fr); /* 4 colunas de largura igual */
-  grid-template-rows: repeat(4, 1fr);    /* 4 linhas de altura igual */
-  gap: 10px;
-}
-
-Car1 {
-  grid-row-start: 3;
-  grid-row-end: 4;
-  grid-column: 3;
-  grid-column-end: 4;
-}
-
-content {
-  display: flex; /* Flexbox para o conteúdo */
-  justify-content: center; /* Centraliza horizontalmente */
-  align-items: center; /* Alinha itens ao centro verticalmente */
-  flex-direction: column; /* Organiza em coluna */
-  gap: 20px; /* Espaço entre os itens */
-  width: 100%; /* Largura total */
-  height: 100%; /* Altura total */
-}
-
-Destaques {
-  display: flex; /* Flexbox para destaques */
-  width: 100%; /* Largura total */
-  justify-content: space-between; /* Espaçamento entre os destaques */
-}
-
-.content
 
 .user-name-header {
   width: 100%; /* Largura total */
@@ -260,9 +209,7 @@ Destaques {
   height: 100%; /* Altura total */
 }
 
-#esquerda {
-  align-items: center; /* Alinha itens ao centro verticalmente */
-}
+
 
 /* Aplica estilo a todas as divs dentro dos destaques */
 .Destaques > div {
@@ -281,10 +228,6 @@ header.main1 a {
   font-size: 20px;
   margin-left: 15px;
   font-weight: bold;
-}
-
-main {
-  margin-left: 60px;
 }
 
 main {
@@ -308,7 +251,7 @@ main {
 
 .Destaques {
   display: grid;
-  grid-template-columns: repeat(2, 1fr);
+  grid-template-columns: repeat(6, 1fr);
   gap: 20px;
 }
 
@@ -335,4 +278,87 @@ b#user-name-nav {
 
 b#user-email-nav {
   font-size: 15px;
+}
+
+.coluna1{
+  grid-column: span 4;
+}
+
+#coluna2{
+  grid-column: span 1;
+  background-color: #fff;
+  border-radius: 10px;
+  padding: 40px;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+}
+
+
+.address-item {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-around;
+
+}
+#address-list {  
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+
+input {
+  margin-top: 5px;
+  height: 10px;
+  padding: 15px;
+  border-radius: 15px;
+  border: solid 1px;
+  font-size: 15px;    
+}
+
+#edit-form {
+  grid-column: span 2;
+  background-color: #fff;
+  border-radius: 10px;
+  padding: 40px;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+}
+
+#edit-form2 {
+  background-color: white;
+  padding: 10px;
+  border-radius: 15px;
+  box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+  margin-top: 10fpx;
+  display: flex;
+  flex-direction: column;
+}
+
+
+.delete-btn{
+  background-color: rgb(132, 14, 201);
+  color: white;
+  border-radius: 10px;
+  cursor: pointer;
+  width: 100px;
+  height: 30px;
+  
+}
+
+.edit-btn{
+  background-color: rgb(132, 14, 201);
+  color: white;
+  border-radius: 10px;
+  cursor: pointer;
+  width: 100px;
+  height: 30px; 
+}
+
+#save-btn{
+  background-color: rgb(132, 14, 201);
+  color: white;
+  border-radius: 10px;
+  cursor: pointer;
+  width: 330px;
+  height: 40px;
 }

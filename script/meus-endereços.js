@@ -14,7 +14,11 @@ document.addEventListener("DOMContentLoaded", function() {
     const user = JSON.parse(localStorage.getItem("user"));
 
     if (user && user.user.name) {
+<<<<<<< HEAD
         document.getElementById("user-name-header").textContent = user.user.name;
+=======
+        document.getElementById("user-name-header").textContent = "Bem-vindo, " + user.user.name;
+>>>>>>> f40a4dc41840d2d240beb3b9f16e4b17f960a3aa
         document.getElementById("user-name-nav").textContent = user.user.name;
     } else {
         document.getElementById("user-name-header").textContent = "Bem-vindo, visitante!";
@@ -171,11 +175,19 @@ async function editAddress(id) {
 
             if (titleField && addressField && numberField && complementField && cepField) {
                 // Preenche os campos com os dados do endereço
+<<<<<<< HEAD
                 titleField.value = address.title ?? '';
                 addressField.value = address.address ?? '';
                 numberField.value = address.number ?? '';
                 complementField.value = address.complement ?? '';
                 cepField.value = address.cep ?? '';
+=======
+                titleField.value = address.title;
+                addressField.value = address.address;
+                numberField.value = address.number;
+                complementField.value = address.complement;
+                cepField.value = address.cep;
+>>>>>>> f40a4dc41840d2d240beb3b9f16e4b17f960a3aa
 
                 // Exibe o botão de salvar e define o evento de clique
                 document.getElementById("save-btn").style.display = "block";
@@ -200,6 +212,7 @@ async function editAddress(id) {
 
 
 
+<<<<<<< HEAD
     // Função para salvar as alterações do endereço
     async function saveEditedAddress(id) {
         const storedData = JSON.parse(localStorage.getItem("user"));
@@ -236,6 +249,11 @@ async function editAddress(id) {
 }
 
 // async function saveEditedAddress(id) {
+=======
+// Função para salvar as alterações do endereço
+// async function saveEditedAddress(id) {
+//     const storedData = JSON.parse(localStorage.getItem("user"));
+>>>>>>> f40a4dc41840d2d240beb3b9f16e4b17f960a3aa
 //     const token = localStorage.getItem("token");
 //     const updatedAddress = {
 //         title: document.getElementById("title").value,
@@ -246,7 +264,11 @@ async function editAddress(id) {
 //     };
 
 //     try {
+<<<<<<< HEAD
 //         const response = await fetch(`https://api.exemplo.com/enderecos/${id}`, {
+=======
+//         const response = await fetch(`https://go-wash-api.onrender.com/api/auth/address/${id}`, {
+>>>>>>> f40a4dc41840d2d240beb3b9f16e4b17f960a3aa
 //             method: 'PUT',
 //             headers: {
 //                 'Authorization': `Bearer ${token}`,
@@ -257,8 +279,12 @@ async function editAddress(id) {
 
 //         if (response.ok) {
 //             alert("Endereço atualizado com sucesso!");
+<<<<<<< HEAD
 //             // Recarrega a lista de endereços após a atualização
 //             loadAddresses();
+=======
+//             loadAddresses(); // Recarrega a lista de endereços após a atualização
+>>>>>>> f40a4dc41840d2d240beb3b9f16e4b17f960a3aa
 //         } else {
 //             const errorData = await response.json();
 //             alert(`Erro ao atualizar endereço: ${errorData.message}`);
@@ -269,6 +295,43 @@ async function editAddress(id) {
 //     }
 // }
 
+<<<<<<< HEAD
+=======
+async function saveEditedAddress(id) {
+    const token = localStorage.getItem("token");
+    const updatedAddress = {
+        title: document.getElementById("title").value,
+        address: document.getElementById("address").value,
+        number: document.getElementById("number").value,
+        complement: document.getElementById("complement").value,
+        cep: document.getElementById("cep").value
+    };
+
+    try {
+        const response = await fetch(`https://api.exemplo.com/enderecos/${id}`, {
+            method: 'PUT',
+            headers: {
+                'Authorization': `Bearer ${token}`,
+                'Content-Type': 'application/json'
+            },
+            body: JSON.stringify(updatedAddress)
+        });
+
+        if (response.ok) {
+            alert("Endereço atualizado com sucesso!");
+            // Recarrega a lista de endereços após a atualização
+            loadAddresses();
+        } else {
+            const errorData = await response.json();
+            alert(`Erro ao atualizar endereço: ${errorData.message}`);
+        }
+    } catch (error) {
+        alert("Ocorreu um erro ao tentar atualizar o endereço.");
+        console.error("Erro:", error);
+    }
+}
+
+>>>>>>> f40a4dc41840d2d240beb3b9f16e4b17f960a3aa
 
 
 

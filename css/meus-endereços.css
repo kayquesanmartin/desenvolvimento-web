@@ -329,6 +329,7 @@ input {
   padding: 10px;
   border-radius: 15px;
   box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+<<<<<<< HEAD
   margin-top: 10fpx;
   display: flex;
   flex-direction: column;
@@ -361,4 +362,9 @@ input {
   cursor: pointer;
   width: 330px;
   height: 40px;
+=======
+  margin-top: 10px;
+  display: flex;
+  flex-direction: column;
+>>>>>>> f40a4dc41840d2d240beb3b9f16e4b17f960a3aa
 }

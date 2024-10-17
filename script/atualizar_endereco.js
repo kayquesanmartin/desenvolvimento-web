@@ -39,7 +39,7 @@ document.addEventListener("DOMContentLoaded", function () {
   }
 });
 
-async function cadastraEndereco() {
+async function atualizarEndereco() {
   const title = document.getElementById("title").value;
   const cep = document.getElementById("cep").value;
   const address = document.getElementById("address").value;
@@ -50,6 +50,8 @@ async function cadastraEndereco() {
     alert("Por favor, preencha todos os campos obrigatórios.");
     return;
   }
+
+  const addressId = document.getElementById("addressId").value;
 
   const data = {
     title: title,
@@ -69,7 +71,7 @@ async function cadastraEndereco() {
 
   try {
     const response = await fetch(
-      "https://go-wash-api.onrender.com/api/auth/address",
+      `https://go-wash-api.onrender.com/api/auth/address/${addressId}`,
       {
         method: "POST",
         headers: {
@@ -80,13 +82,15 @@ async function cadastraEndereco() {
       }
     );
 
-    if (!response.ok) {
-      throw new Error("Network response was not ok: " + response.statusText);
+    if (response.ok) {
+      const result = await response.json();
+      console.log("Success:", result);
+      alert("Endereço atualizado com sucesso! :)");
+    } else {
+      const result = await response.json();
+      console.error("Error:", result);
+      alert("Ocorreu um erro ao atualizar o endereço. :( ");
     }
-
-    const result = await response.json();
-    console.log("Success:", result);
-    alert("Endereço cadastrado com sucesso!");
   } catch (error) {
     console.error("Error:", error);
     alert("Ocorreu um erro ao cadastrar o endereço.");

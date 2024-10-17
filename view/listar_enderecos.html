@@ -16,11 +16,11 @@
       referrerpolicy="no-referrer"
     />
 
-    <link rel="stylesheet" href="../css/home.css" />
+    <link rel="stylesheet" href="../css/listar_enderecos.css" />
     <!-- Link para o stylesheet local -->
-    <script src="../script/home.js"></script>
+    <script src="../script/listar_enderecos.js"></script>
     <!-- Script JavaScript local -->
-    <title>Home</title>
+    <title>Meus Endereços</title>
     <!-- Título da página -->
   </head>
 
@@ -51,7 +51,7 @@
 
         <ul id="side_items">
           <!-- Lista de itens do menu lateral -->
-          <li class="side-item active">
+          <li class="side-item">
             <!-- Item ativo -->
             <a href="home.html">
               <i class="fa-solid fa-chart-line"></i>
@@ -69,14 +69,12 @@
           <li class="side-item">
             <a href="endereco.html">
               <i class="fa-solid fa-map-location-dot"></i>
-              <!-- <img src="../view/img/pngwing.com.png" alt="Veículos" style="width: 20px; height: 20px;"/>  -->
               <span class="item-description"> Cadastrar Endereços </span>
             </a>
           </li>
-          <li class="side-item">
-            <a href="./listar_enderecos.html">
+          <li class="side-item active">
+            <a href="listar_enderecos.html">
               <i class="fa-solid fa-map-location-dot"></i>
-              <!-- <img src="../view/img/pngwing.com.png" alt="Veículos" style="width: 20px; height: 20px;"/>  -->
               <span class="item-description"> Meus Endereços </span>
             </a>
           </li>
@@ -95,7 +93,6 @@
           <li class="side-item">
             <a href="#">
               <i class="fa-solid fa-car"></i>
-              <!-- <img src="../view/img/carro.png" alt="Veículos" style="width: 20px; height: 20px;"/>  -->
               <span class="item-description"> Veículos </span>
             </a>
           </li>
@@ -131,11 +128,30 @@
           <p id="user_name"></p>
           <div class="Destaques">
             <!-- Seção de destaques -->
-            <div>
-              <p>quadro mostrando detalhes.</p>
+            <div class="coluna1">
+              <b id="address-list"> </b>
             </div>
-            <div>
-              <p>segundo quadro mostrando detalhes...</p>
+            <div id="edit-form" style="display: none">
+              <h2>Editar Endereço</h2>
+              <form id="edit-form2">
+                <!-- O formulário pode estar oculto -->
+                <label for="title">Insira um nome:<br /></label>
+                <input type="text" id="title" placeholder="Título" />
+                <br />
+                <label for="address">Endereço:<br /></label>
+                <input type="text" id="address" placeholder="Endereço" />
+                <br />
+                <label for="number">Número:<br /></label>
+                <input type="text" id="number" placeholder="Número" />
+                <br />
+                <label for="complement">Complemento:<br /></label>
+                <input type="text" id="complement" placeholder="Complemento" />
+                <br />
+                <label for="cep">CEP:<br /></label>
+                <input type="text" id="cep" placeholder="CEP" />
+                <br />
+                <button id="save-btn" style="display: none">Salvar</button>
+              </form>
             </div>
           </div>
         </div>
@@ -154,7 +170,7 @@
         </a>
       </div>
     </header>
-    <script src="../script/home.js"></script>
+    <script src="../script/listar_enderecos.js"></script>
     <!-- Script JavaScript local -->
   </body>
 </html>

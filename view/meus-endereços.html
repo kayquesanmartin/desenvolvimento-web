@@ -108,18 +108,35 @@
       <div class="content"> <!-- Área de conteúdo -->
         <p id="user_name"></p> 
         <div class="Destaques"> <!-- Seção de destaques -->
-          <div>
-            <div>
-                <b id="address-list">
-                </b>
-            </div>
+          <div class="coluna1">
+            <b id="address-list">
+            </b>
           </div>
-          <div>
-            <p>segundo quadro mostrando detalhes...</p>
+          <div id="edit-form" style="display: none;">
+            <h2>Editar Endereço</h2>
+            <form id="edit-form2"> <!-- O formulário pode estar oculto -->
+              <label for="title">Insira um nome:<br /></label>
+              <input type="text" id="title" placeholder="Título">
+              <br />
+              <label for="address">Endereço:<br /></label>
+              <input type="text" id="address" placeholder="Endereço">
+              <br />
+              <label for="number">Número:<br /></label>
+              <input type="text" id="number" placeholder="Número">
+              <br />
+              <label for="complement">Complemento:<br /></label>
+              <input type="text" id="complement" placeholder="Complemento">
+              <br />
+              <label for="cep">CEP:<br /></label>
+              <input type="text" id="cep" placeholder="CEP">
+              <br />
+              <button id="save-btn" style="display:none;">Salvar</button>
+            </form>
           </div>
         </div>
       </div>
     </div>
+    
   </main>
   <header class="main1"> <!-- Cabeçalho da página -->
     <div id="title">

@@ -297,7 +297,7 @@ b#user-email-nav {
   display: flex;
   flex-direction: row;
   align-items: center;
-  justify-content: space-around;
+  justify-content: space-between;
 
 }
 #address-list {  
@@ -317,6 +317,9 @@ input {
 }
 
 #edit-form {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
   grid-column: span 2;
   background-color: #fff;
   border-radius: 10px;
@@ -329,7 +332,6 @@ input {
   padding: 10px;
   border-radius: 15px;
   box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
-  margin-top: 10fpx;
   display: flex;
   flex-direction: column;
 }
@@ -359,7 +361,7 @@ input {
   color: white;
   border-radius: 10px;
   cursor: pointer;
-  width: 330px;
+  width: 100%;
   height: 40px;
   margin-top: 10fpx;
   display: flex;
@@ -384,13 +386,4 @@ input {
   cursor: pointer;
   width: 100px;
   height: 30px; 
-}
-
-#save-btn{
-  background-color: rgb(132, 14, 201);
-  color: white;
-  border-radius: 10px;
-  cursor: pointer;
-  width: 330px;
-  height: 40px;
 }

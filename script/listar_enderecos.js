@@ -76,11 +76,11 @@ function displayAddresses(data) {
         const addressItem = document.createElement("div");
         addressItem.className = "address-item";
         addressItem.innerHTML = `
-          <h3>${address.title}</h3>
-          <td>${address.address}, ${address.number}</td>
-          <td>${address.complement ? address.complement : ''}</td>
-          <td>CEP: ${address.cep}</td>
-          <p>
+          <h3 class="address-item1">${address.title}</h3>
+          <p class="address-item2">${address.address}, ${address.number}
+          ${address.complement ? address.complement : ''}
+          CEP: ${address.cep}</p>
+          <p class="address-item3">
           <button class="delete-btn" onclick="deleteAddress(${address.id})">Excluir</button>
           <button class="edit-btn" onclick="editAddress(${address.id})">Editar</button>
           </p>

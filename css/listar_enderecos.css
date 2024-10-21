@@ -25,6 +25,7 @@ body {
   transition: all 0.5s; /* Transição suave para alterações */
   min-width: 82px; /* Largura mínima do sidebar */
   z-index: 2; /* Camada acima de outros elementos */
+  position: fixed;
 }
 
 #sidebar_content {
@@ -231,8 +232,8 @@ header.main1 a {
 }
 
 main {
-  margin-top: 240px;
-  margin-left: 120px;
+  margin-top: 150px;
+  margin-left: 100px;
   padding: 30px;
   flex-grow: 1;
   transition: margin-left 0.3s ease;
@@ -251,7 +252,7 @@ main {
 
 .Destaques {
   display: grid;
-  grid-template-columns: repeat(6, 1fr);
+  grid-template-columns: repeat(7, 1fr);
   gap: 20px;
 }
 
@@ -281,7 +282,7 @@ b#user-email-nav {
 }
 
 .coluna1{
-  grid-column: span 4;
+  grid-column: span 5;
 }
 
 #coluna2{
@@ -293,13 +294,28 @@ b#user-email-nav {
 }
 
 
-.address-item {
+/* .address-item {
   display: flex;
   flex-direction: row;
   align-items: center;
   justify-content: space-between;
 
+} */
+
+.address-item {
+  display: grid;
+  grid-template-columns: repeat(7, 1fr);
 }
+.address-item3 {
+  grid-column: span 2;
+}
+.address-item2 {
+  grid-column: span 4;
+}
+.address-item1 {
+  grid-column: span 1;
+}
+
 #address-list {  
     display: flex;
     flex-direction: column;

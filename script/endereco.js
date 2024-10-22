@@ -85,6 +85,9 @@ async function cadastraEndereco() {
     const result = await response.json();
     console.log("Success:", result);
     alert("Endereço cadastrado com sucesso!");
+
+    // Redireciona após o cadastro bem-sucedido
+    window.location.href = "listar_enderecos.html";
   } catch (error) {
     console.error("Error:", error);
     alert("Ocorreu um erro ao cadastrar o endereço.");

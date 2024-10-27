@@ -72,6 +72,8 @@ function displayAddresses(data) {
         return;
     }
 
+    
+
     addresses.forEach(address => {
         const addressItem = document.createElement("div");
         addressItem.className = "address-item";

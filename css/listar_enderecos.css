@@ -250,11 +250,11 @@ main {
   color: #555;
 }
 
-/* .Destaques {
+.Destaques {
   display: grid;
   grid-template-columns: repeat(7, 1fr);
   gap: 20px;
-} */
+}
 
 .Destaques div {
   background-color: #fff;
@@ -304,16 +304,16 @@ b#user-email-nav {
 
 .address-item {
   display: grid;
-  grid-template-columns: repeat(5, 1fr);
+  grid-template-columns: repeat(9, 1fr);
 }
 .address-item3 {
-  grid-column: span 1;
+  grid-column: span 2;
 }
 .address-item2 {
-  grid-column: span 3;
+  grid-column: span 5;
 }
 .address-item1 {
-  grid-column: span 1;
+  grid-column: span 2;
 }
 
 #address-list {  

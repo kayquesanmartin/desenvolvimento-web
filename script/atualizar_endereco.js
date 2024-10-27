@@ -23,11 +23,14 @@ document.addEventListener("DOMContentLoaded", function () {
     // Caso não haja dados no localStorage ou nome, pode exibir uma mensagem padrão
     document.getElementById("user-name-nav").textContent = "Visitante!";
   }
+<<<<<<< HEAD
 });
 
 document.addEventListener("DOMContentLoaded", function () {
   // Recupera o objeto do usuário armazenado no localStorage
   const user = JSON.parse(localStorage.getItem("user")); // Assumindo que os dados do usuário estão no localStorage como um objeto JSON
+=======
+>>>>>>> main
 
   if (user && user.user.email) {
     // Se o objeto de usuário existir e tiver o campo 'name', exibimos no header
@@ -39,7 +42,11 @@ document.addEventListener("DOMContentLoaded", function () {
   }
 });
 
+<<<<<<< HEAD
 async function atualizarEndereco() {
+=======
+async function cadastraEndereco() {
+>>>>>>> main
   const title = document.getElementById("title").value;
   const cep = document.getElementById("cep").value;
   const address = document.getElementById("address").value;
@@ -51,8 +58,11 @@ async function atualizarEndereco() {
     return;
   }
 
+<<<<<<< HEAD
   const addressId = document.getElementById("addressId").value;
 
+=======
+>>>>>>> main
   const data = {
     title: title,
     cep: cep,
@@ -82,6 +92,7 @@ async function atualizarEndereco() {
       }
     );
 
+<<<<<<< HEAD
     if (response.ok) {
       const result = await response.json();
       console.log("Success:", result);
@@ -91,6 +102,15 @@ async function atualizarEndereco() {
       console.error("Error:", result);
       alert("Ocorreu um erro ao atualizar o endereço. :( ");
     }
+=======
+    if (!response.ok) {
+      throw new Error("Network response was not ok: " + response.statusText);
+    }
+
+    const result = await response.json();
+    console.log("Success:", result);
+    alert("Endereço cadastrado com sucesso!");
+>>>>>>> main
   } catch (error) {
     console.error("Error:", error);
     alert("Ocorreu um erro ao cadastrar o endereço.");

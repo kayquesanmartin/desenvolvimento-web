@@ -1,5 +1,4 @@
 <!DOCTYPE html>
-<<<<<<< HEAD
 <html lang="pt-br">
   <!-- Define o idioma da página como português do Brasil -->
 
@@ -19,6 +18,8 @@
 
     <link rel="stylesheet" href="../css/listar_enderecos.css" />
     <!-- Link para o stylesheet local -->
+    <script src="../script/listar_enderecos.js"></script>
+    <!-- Script JavaScript local -->
     <title>Meus Endereços</title>
     <!-- Título da página -->
   </head>
@@ -52,7 +53,7 @@
           <!-- Lista de itens do menu lateral -->
           <li class="side-item">
             <!-- Item ativo -->
-            <a href="./home.html">
+            <a href="home.html">
               <i class="fa-solid fa-chart-line"></i>
               <!-- Ícone do Font Awesome -->
               <span class="item-description"> Dashboard </span>
@@ -66,14 +67,16 @@
             </a>
           </li>
           <li class="side-item">
-            <a href="./endereco.html">
+            <a href="endereco.html">
               <i class="fa-solid fa-map-location-dot"></i>
+              <!-- <img src="../view/img/pngwing.com.png" alt="Veículos" style="width: 20px; height: 20px;"/>  -->
               <span class="item-description"> Cadastrar Endereços </span>
             </a>
           </li>
           <li class="side-item active">
-            <a href="meus-endereços.html">
-              <i class="fa-solid fa-map-location-dot"></i>
+            <a href="listar_enderecos.html">
+              <i class="fa-solid fa-address-book"></i>
+              <!-- <img src="../view/img/pngwing.com.png" alt="Veículos" style="width: 20px; height: 20px;"/>  -->
               <span class="item-description"> Meus Endereços </span>
             </a>
           </li>
@@ -127,13 +130,29 @@
           <p id="user_name"></p>
           <div class="Destaques">
             <!-- Seção de destaques -->
-            <div>
-              <div>
-                <b id="address-list"> </b>
-              </div>
+            <div class="coluna1">
+              <b id="address-list"> </b>
             </div>
-            <div>
-              <p>segundo quadro mostrando detalhes...</p>
+            <div id="edit-form" style="display: none">
+              <h2>Editar Endereço</h2>
+              <form id="edit-form2">
+                <label for="title">Insira um nome:<br /></label>
+                <input type="text" id="title" placeholder="Título" />
+                <br />
+                <label for="address">Endereço:<br /></label>
+                <input type="text" id="address" placeholder="Endereço" />
+                <br />
+                <label for="number">Número:<br /></label>
+                <input type="text" id="number" placeholder="Número" />
+                <br />
+                <label for="complement">Complemento:<br /></label>
+                <input type="text" id="complement" placeholder="Complemento" />
+                <br />
+                <label for="cep">CEP:<br /></label>
+                <input type="text" id="cep" placeholder="CEP" />
+                <br />
+                <button id="save-btn" style="display: none">Salvar</button>
+              </form>
             </div>
           </div>
         </div>
@@ -156,159 +175,3 @@
     <!-- Script JavaScript local -->
   </body>
 </html>
-=======
-<html lang="pt-br"> <!-- Define o idioma da página como português do Brasil -->
-
-<head>
-  <meta charset="UTF-8" /> <!-- Define a codificação de caracteres como UTF-8 -->
-  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"
-    integrity="sha512-DTOQO9RWCH3ppGqcWaEA1BIZOC6xxalwEsw9c2QQeAIftl+Vegovlnee1c9QX4TctnWMn13TZye+giMm8e2LwA=="
-    crossorigin="anonymous" referrerpolicy="no-referrer" />
-
-  <link rel="stylesheet" href="../css/listar_enderecos.css" /> <!-- Link para o stylesheet local -->
-  <script src="../script/listar_enderecos.js"></script> <!-- Script JavaScript local -->
-  <title>Meus Endereços</title> <!-- Título da página -->
-</head>
-
-<body>
-  <nav id="sidebar"> <!-- Barra lateral de navegação -->
-    <div id="sidebar_content">
-      <div id="user"> <!-- Informações do usuário -->
-        <img src="../view/img/user-svgrepo-com.svg" id="user_avatar" alt="Avatar" />
-        <!-- Imagem do avatar do usuário -->
-        <p id="user_infos"> <!-- Informações do usuário -->
-          <span class="item-description"> 
-            <b id="user-name-nav"> <!-- Cabeçalho com o nome do usuário -->
-            </b>
-          </span>
-          <span class="item-description">
-            <b id="user-email-nav">
-            </b>
-          </span>
-        </p>
-      </div>
-
-      <ul id="side_items"> <!-- Lista de itens do menu lateral -->
-        <li class="side-item"> <!-- Item ativo -->
-          <a href="home.html">
-            <i class="fa-solid fa-chart-line"></i> <!-- Ícone do Font Awesome -->
-            <span class="item-description"> Dashboard </span>
-          </a>
-        </li>
-
-        <li class="side-item">
-          <a href="#">
-            <i class="fa-solid fa-user"></i>
-            <span class="item-description"> Usuários </span>
-          </a>
-        </li>
-        <li class="side-item">
-          <a href="endereco.html">
-            <i class="fa-solid fa-map-location-dot"></i>
-            <!-- <img src="../view/img/pngwing.com.png" alt="Veículos" style="width: 20px; height: 20px;"/>  -->
-            <span class="item-description"> Cadastrar Endereços </span>
-          </a>
-        </li>
-        <li class="side-item active">
-            <a href="listar_enderecos.html">
-              <i class="fa-solid fa-address-book"></i>
-              <!-- <img src="../view/img/pngwing.com.png" alt="Veículos" style="width: 20px; height: 20px;"/>  -->
-              <span class="item-description"> Meus Endereços </span>
-            </a>
-          </li>
-        <li class="side-item">
-          <a href="#">
-            <i class="fa-solid fa-bell"></i>
-            <span class="item-description"> Notificações </span>
-          </a>
-        </li>
-        <li class="side-item">
-          <a href="#">
-            <i class="fa-solid fa-box"></i>
-            <span class="item-description"> Produtos </span>
-          </a>
-        </li>
-        <li class="side-item">
-          <a href="#">
-            <i class="fa-solid fa-car"></i>
-            <!-- <img src="../view/img/carro.png" alt="Veículos" style="width: 20px; height: 20px;"/>  -->
-            <span class="item-description"> Veículos </span>
-          </a>
-        </li>
-        <li class="side-item">
-          <a href="#">
-            <i class="fa-solid fa-gear"></i>
-            <span class="item-description"> Configurações </span>
-          </a>
-        </li>
-      </ul>
-
-      <button id="open_btn" onclick="toggleSidebar()"> <!-- Botão para abrir ou fechar a barra lateral -->
-        <i id="open_btn_icon" class="fa-solid fa-chevron-right"></i>
-      </button>
-    </div>
-
-    <div id="logout"> <!-- Seção de logout -->
-      <button id="logout_btn">
-        <i class="fa-solid fa-right-from-bracket"></i>
-        <span class="item-description"> Logout </span>
-      </button>
-    </div>
-  </nav>
-
-  <main> <!-- Conteúdo principal da página -->
-    <div class="geral">
-      <b id="user-name-header"> <!-- Cabeçalho com o nome do usuário -->
-      </b>
-      <div class="content"> <!-- Área de conteúdo -->
-        <p id="user_name"></p> 
-        <div class="Destaques"> <!-- Seção de destaques -->
-          <div class="coluna1">
-            <b id="address-list">
-            </b>
-          </div>
-          <div id="edit-form" style="display: none;">
-            <h2>Editar Endereço</h2>
-            <form id="edit-form2">
-              <label for="title">Insira um nome:<br /></label>
-              <input type="text" id="title" placeholder="Título">
-              <br />
-              <label for="address">Endereço:<br /></label>
-              <input type="text" id="address" placeholder="Endereço">
-              <br />
-              <label for="number">Número:<br /></label>
-              <input type="text" id="number" placeholder="Número">
-              <br />
-              <label for="complement">Complemento:<br /></label>
-              <input type="text" id="complement" placeholder="Complemento">
-              <br />
-              <label for="cep">CEP:<br /></label>
-              <input type="text" id="cep" placeholder="CEP">
-              <br />
-              <button id="save-btn" style="display:none;">Salvar</button>
-            </form>
-          </div>
-        </div>
-      </div>
-    </div>
-    
-  </main>
-  <header class="main1"> <!-- Cabeçalho da página -->
-    <div id="title">
-      <a href="../view/home.html"> <!-- Link para a página inicial -->
-        <img src="../view/img/Logo1.png" alt="CarOne" style="width: 89px; height: 72px;" />
-      </a>
-    </div>
-  </header>
-  <script src="../script/listar_enderecos.js"></script> <!-- Script JavaScript local -->
-</body>
-
-</html>
-
-
-
-
->>>>>>> main

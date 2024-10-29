@@ -36,6 +36,9 @@ b#user-name-nav {
   font-size: 25px;
 }
 
+#user-name-header {
+  font-size: 28px;
+}
 #user {
   display: flex; /* Flexbox para o bloco do usuário */
   align-items: center; /* Alinha itens ao centro verticalmente */
@@ -283,6 +286,7 @@ b#user-email-nav {
 
 .coluna1{
   grid-column: span 5;
+  transition: all 0.3s ease;
 }
 
 #coluna2{
@@ -305,7 +309,21 @@ b#user-email-nav {
 .address-item {
   display: grid;
   grid-template-columns: repeat(9, 1fr);
+  margin-top: 10px;
+  margin-bottom: 10px;
+  white-space: nowrap;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 10px;
+  padding: 10px;
+  border-radius: 10px;
+  background-color: #fff;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+  font-size: 15px;
+  transition: all 0.3s ease;
 }
+
 .address-item3 {
   grid-column: span 2;
 }
@@ -341,6 +359,7 @@ input {
   border-radius: 10px;
   padding: 40px;
   box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+  transition: all 0.3s ease;
 }
 
 #edit-form2 {
